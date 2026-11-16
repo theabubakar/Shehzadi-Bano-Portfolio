@@ -23,9 +23,9 @@ export default function Portfolio() {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    'Senior .NET Core & MERN Developer',
-    'Full-Stack Cloud Architect',
-    'Microservices & API Specialist'
+    'Senior Full-Stack & .NET Developer',
+    'React.js & Next.js Specialist',
+    'Cloud & Microservices Architect'
   ];
 
   useEffect(() => {
@@ -61,18 +61,15 @@ export default function Portfolio() {
   };
 
   const skillsData = [
-    { name: 'C# & .NET Core', category: 'backend', level: 'Expert', desc: 'Enterprise Web APIs, LINQ, EF Core, Microservices' },
-    { name: 'ASP.NET Web API', category: 'backend', level: 'Expert', desc: 'RESTful API design, JWT Auth, Swagger/OpenAPI' },
-    { name: 'Node.js & Express.js', category: 'backend', level: 'Expert', desc: 'Asynchronous event-driven architecture, middleware' },
-    { name: 'React.js & Next.js', category: 'frontend', level: 'Expert', desc: 'SSR, SSG, Custom Hooks, Redux Toolkit, Tailwind CSS' },
-    { name: 'TypeScript & ES6+', category: 'frontend', level: 'Expert', desc: 'Strict typing, interfaces, generics, modern JavaScript' },
-    { name: 'MongoDB & Mongoose', category: 'database', level: 'Advanced', desc: 'Aggregation pipelines, schema design, indexing' },
-    { name: 'SQL Server & EF Core', category: 'database', level: 'Expert', desc: 'Relational modeling, stored procedures, query tuning' },
-    { name: 'AWS Cloud (EC2, S3, RDS)', category: 'cloud', level: 'Advanced', desc: 'Cloud deployments, IAM policies, RDS scaling, S3 buckets' },
-    { name: 'Docker & Kubernetes', category: 'devops', level: 'Intermediate', desc: 'Containerization, orchestration, environment parity' },
-    { name: 'CI/CD Pipelines & Git', category: 'devops', level: 'Advanced', desc: 'GitHub Actions, GitLab CI, automated testing workflows' },
-    { name: 'Security & OAuth 2.0', category: 'security', level: 'Expert', desc: 'JWT token rotation, RBAC, HTTPS encryption, input validation' },
-    { name: 'SignalR & WebSockets', category: 'backend', level: 'Advanced', desc: 'Real-time duplex communication, live notifications' }
+    { name: 'C# & ASP.NET Core', category: 'backend', level: 'Expert', desc: 'Enterprise Web APIs, Entity Framework Core, LINQ, SignalR' },
+    { name: 'Node.js & Express.js', category: 'backend', level: 'Expert', desc: 'RESTful APIs, middleware, microservices architecture' },
+    { name: 'React.js & Next.js', category: 'frontend', level: 'Expert', desc: 'SSR, SSG, ISR, App Router, Redux Toolkit, Tailwind CSS' },
+    { name: 'TypeScript & ES6+', category: 'frontend', level: 'Expert', desc: 'Strict typing, modern JavaScript, custom hooks' },
+    { name: 'SQL Server & PostgreSQL', category: 'database', level: 'Expert', desc: 'Relational modeling, stored procedures, query optimization' },
+    { name: 'MongoDB & Mongoose', category: 'database', level: 'Advanced', desc: 'Aggregation pipelines, schema design, NoSQL databases' },
+    { name: 'AWS Cloud (EC2, S3, RDS)', category: 'cloud', level: 'Advanced', desc: 'Cloud deployment, IAM access management, CloudWatch' },
+    { name: 'Docker & Kubernetes', category: 'devops', level: 'Intermediate', desc: 'Containerization, CI/CD pipelines, environment parity' },
+    { name: 'Security & JWT Auth', category: 'security', level: 'Expert', desc: 'OAuth 2.0, RBAC, input sanitization, API security' }
   ];
 
   const filteredSkills = skillsData.filter(skill => {
@@ -87,58 +84,44 @@ export default function Portfolio() {
       id: 'enterprise-platform',
       title: 'Enterprise Business Management Platform',
       category: 'dotnet',
-      summary: 'High-throughput enterprise management platform built with ASP.NET Core microservices and Next.js frontend.',
-      tech: ['.NET Core 8', 'C#', 'Next.js', 'SQL Server', 'AWS RDS', 'Docker'],
-      impact: 'Reduced query latency by 45% and scaled concurrent enterprise transaction throughput.',
-      description: 'An enterprise-grade platform engineered to handle complex business workflows, multi-tenant approvals, real-time dashboard analytics, and automated reporting. Built on clean architecture principles with separate domain, service, and data access layers.',
+      summary: 'High-throughput enterprise management platform built with ASP.NET Core, Next.js, and SQL Server.',
+      tech: ['.NET Core', 'C#', 'Next.js', 'React.js', 'SQL Server', 'PostgreSQL', 'AWS', 'Docker'],
+      impact: 'Architected high-throughput backend Web APIs and reduced query latency with optimized EF Core LINQ queries.',
+      description: 'An enterprise-grade platform engineered to handle complex business workflows, multi-tenant approvals, real-time dashboard analytics, and automated audit logging.',
       architecture: [
-        'Implemented CQRS pattern in ASP.NET Core for optimized read/write separation.',
-        'Configured Entity Framework Core with optimized LINQ query execution plans and database indexing.',
-        'Developed server-rendered dynamic dashboards using Next.js and Tailwind CSS for lightning-fast First Contentful Paint (FCP).',
-        'Deployed containerized microservices via Docker onto AWS EC2 clusters with automated RDS database backups.'
+        'Architected high-throughput backend Web APIs using ASP.NET Core and C#, implementing Repository and Unit of Work design patterns.',
+        'Designed complex relational schemas in SQL Server and PostgreSQL using Entity Framework Core.',
+        'Built intuitive executive dashboards and real-time approval interfaces using Next.js (SSR) and Tailwind CSS.',
+        'Managed containerized application deployment via Docker on AWS EC2 with automated database backups on AWS RDS.'
       ]
     },
     {
       id: 'healthcare-platform',
       title: 'Cloud-Based Healthcare Management Platform',
       category: 'fullstack',
-      summary: 'Secure HIPAA-compliant healthcare portal connecting patients, physicians, and administrative staff.',
-      tech: ['Node.js', 'Express', 'React.js', 'MongoDB', 'AWS S3', 'JWT Auth'],
-      impact: 'Processed 50k+ monthly patient appointments with zero data leakage incidents.',
-      description: 'A modular healthcare platform providing electronic health records (EHR), appointment scheduling, automated billing, and secure role-based access control for multi-hospital networks.',
+      summary: 'Secure healthcare portal connecting patients, physicians, and administrative staff with real-time alerts.',
+      tech: ['Node.js', 'Express.js', 'ASP.NET Core', 'SignalR', 'React.js', 'MongoDB', 'AWS S3'],
+      impact: 'Processed electronic medical records and appointment scheduling with real-time SignalR push notifications.',
+      description: 'A modular healthcare platform providing electronic medical records (EMR), patient onboarding, automated billing, and secure role-based access control.',
       architecture: [
-        'Built robust RESTful backend services using Node.js and Express with strict input sanitization and validation middleware.',
-        'Designed flexible MongoDB schemas and aggregation pipelines for complex patient record tracking.',
-        'Integrated AWS S3 secure object storage for encrypted medical documents and profile imagery.',
-        'Enforced granular Role-Based Access Control (RBAC) ensuring patient data privacy.'
+        'Developed microservices for EMR, patient onboarding, appointment scheduling, and automated billing.',
+        'Integrated SignalR hubs to send instant push notifications and critical alerts to staff dashboards in real time.',
+        'Constructed flexible data structures using MySQL for transactional data and MongoDB with Mongoose ODM for unstructured records.',
+        'Configured encrypted document storage using AWS S3 alongside IAM access management and CloudWatch.'
       ]
     },
     {
       id: 'hospital-system',
-      title: 'Integrated Hospital Management System (HMS)',
+      title: 'Hospital Operations & Vaccination Management System',
       category: 'dotnet',
-      summary: 'Comprehensive hospital operations platform with real-time room tracking and prescription management.',
-      tech: ['ASP.NET MVC', 'C#', 'SQL Server', 'SignalR', 'Bootstrap', 'Azure'],
-      impact: 'Improved emergency ward response times by 35% through real-time push updates.',
-      description: 'An all-in-one hospital management suite designed for rapid administrative workflows, emergency triage tracking, pharmacy inventory management, and doctor scheduling.',
+      summary: 'Comprehensive hospital operations platform with patient tracking, queue monitoring, and vaccination tracking.',
+      tech: ['C#', 'ASP.NET MVC', 'Node.js', 'Next.js', 'React.js', 'SQL Server', 'PostgreSQL'],
+      impact: 'Optimized database search performance across SQL Server and PostgreSQL, reducing query latency by over 40%.',
+      description: 'An all-in-one hospital management suite designed for patient tracking, pharmacy inventory, queue monitoring, and vaccine inventory management.',
       architecture: [
-        'Utilized ASP.NET MVC architecture with a clean separation of concerns across controllers, services, and repositories.',
-        'Integrated ASP.NET SignalR for real-time WebSocket communication, instantly notifying doctors of lab results and bed availability.',
-        'Engineered high-performance SQL Server stored procedures and triggers for audit logging and secure transaction handling.'
-      ]
-    },
-    {
-      id: 'vaccination-platform',
-      title: 'National Vaccination Tracking & Inventory System',
-      category: 'fullstack',
-      summary: 'Large-scale immunisation scheduling and cold-chain inventory monitoring portal.',
-      tech: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Redis Caching'],
-      impact: 'Successfully coordinated vaccine distribution logistics across 120+ regional health centers.',
-      description: 'A dedicated tracking system designed to manage vaccine stock levels, cold-chain temperature alerts, citizen appointment slots, and automated SMS/email reminders.',
-      architecture: [
-        'Implemented Redis caching layer to handle high-conquerency appointment slot bookings during peak hours without database locks.',
-        'Built responsive, accessible React.js components optimized for mobile and desktop devices used by field nurses.',
-        'Engineered automated daily reporting scripts exporting compliance analytics to regional health directors.'
+        'Built core patient tracking, pharmacy inventory, patient queue monitoring, and vaccine inventory modules using C# and ASP.NET.',
+        'Engineered secure Web APIs for generating dynamic digital vaccination certificates and verification QR codes.',
+        'Implemented strict data security and input sanitization layers to guarantee compliance with healthcare privacy regulations.'
       ]
     }
   ];
@@ -150,12 +133,12 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-teal-500 selection:text-white relative overflow-hidden">
-      {/* Ambient Background Glow Orbs */}
+      {/* Background Glow Orbs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[150px] pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-10 w-[450px] h-[450px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none"></div>
 
-      {/* Floating Glass Navbar */}
+      {/* Header / Navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4">
         <nav className="max-w-7xl mx-auto glass-panel rounded-2xl px-6 py-3 flex items-center justify-between shadow-2xl shadow-slate-950/40">
           <a href="#home" className="flex items-center gap-3 group">
@@ -166,7 +149,7 @@ export default function Portfolio() {
               <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-teal-300 bg-clip-text text-transparent">
                 Shahzadee Bano
               </span>
-              <span className="block text-xs font-mono text-teal-400">Senior .NET & MERN Dev</span>
+              <span className="block text-xs font-mono text-teal-400">Senior Full-Stack & .NET Developer</span>
             </div>
           </a>
 
@@ -205,7 +188,6 @@ export default function Portfolio() {
           </button>
         </nav>
 
-        {/* Mobile Menu Dropdown */}
         {mobileMenuOpen && (
           <div className="max-w-7xl mx-auto mt-2 glass-panel rounded-2xl p-6 lg:hidden flex flex-col gap-3 shadow-2xl bg-slate-900/95 border border-slate-800">
             {['home', 'about', 'skills', 'experience', 'projects', 'architecture', 'code', 'contact'].map((item) => (
@@ -226,7 +208,7 @@ export default function Portfolio() {
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-8 pt-32 pb-20">
 
-        {/* 1. HERO SECTION */}
+        {/* HERO SECTION */}
         <section id="home" className="min-h-[85vh] flex flex-col justify-center items-center text-center relative py-12">
           <div className="absolute inset-0 flex items-center justify-center -z-10 opacity-20">
             <div className="w-[600px] h-[600px] bg-gradient-to-tr from-teal-500/30 to-indigo-600/30 rounded-full blur-[100px]"></div>
@@ -234,11 +216,11 @@ export default function Portfolio() {
 
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-teal-500/30 text-teal-300 text-xs font-mono mb-6 shadow-lg shadow-teal-500/5 animate-bounce">
             <Sparkles className="w-3.5 h-3.5 text-teal-400" />
-            <span>4+ Years Professional Engineering Excellence</span>
+            <span>4+ Years Professional Full-Stack Experience</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl leading-[1.1] mb-6">
-            Architecting <span className="bg-gradient-to-r from-teal-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">Resilient Enterprise</span> & Cloud Systems
+            Architecting <span className="bg-gradient-to-r from-teal-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">Enterprise Software</span> & Cloud Solutions
           </h1>
 
           <p className="text-lg sm:text-xl font-mono text-teal-300/90 h-12 mb-6 flex items-center justify-center">
@@ -246,7 +228,7 @@ export default function Portfolio() {
           </p>
 
           <p className="text-base sm:text-lg text-slate-400 max-w-2xl mb-10 leading-relaxed font-normal">
-            Senior Full-Stack Software Engineer specializing in <strong className="text-white font-semibold">C#, .NET Core, ASP.NET Web API, React.js, Next.js, and AWS Cloud architecture</strong>. Delivering high-concurrency, secure, and production-grade applications.
+            Senior Full-Stack Developer specializing in <strong className="text-white font-semibold">Node.js, React.js, Next.js, ASP.NET Core, C#, and SQL Server</strong>. Building secure, high-performance web applications and cloud architectures.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
@@ -266,13 +248,12 @@ export default function Portfolio() {
             </a>
           </div>
 
-          {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
             {[
-              { label: 'Years Experience', value: '4+ Years' },
-              { label: 'Primary Company', value: 'SoftVolta' },
-              { label: 'Tech Stack', value: '.NET Core & MERN' },
-              { label: 'Cloud Provider', value: 'AWS & Docker' }
+              { label: 'Experience', value: '4+ Years' },
+              { label: 'Current Role', value: 'Senior Full-Stack' },
+              { label: 'Specialty', value: '.NET & MERN' },
+              { label: 'Location', value: 'Islamabad, PK' }
             ].map((stat, idx) => (
               <div key={idx} className="glass-card p-5 rounded-2xl text-center border border-slate-800/80 shadow-lg">
                 <div className="text-xl sm:text-2xl font-extrabold text-white mb-1 font-mono">{stat.value}</div>
@@ -282,7 +263,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 2. ABOUT ME SECTION */}
+        {/* ABOUT ME SECTION */}
         <section id="about" className="py-20">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-xs font-mono uppercase tracking-widest text-teal-400 mb-3">Professional Background</h2>
@@ -317,13 +298,13 @@ export default function Portfolio() {
             {activeAboutTab === 'bio' && (
               <div className="space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed">
                 <p>
-                  I am <strong className="text-white font-semibold">Shahzadee Bano</strong>, a dedicated <strong className="text-teal-400 font-semibold">Senior Full-Stack Software Engineer</strong> with over <strong className="text-white font-semibold">4+ years of professional experience</strong> architecting, developing, and deploying scalable enterprise web applications.
+                  I am <strong className="text-white font-semibold">Shahzadee Bano</strong>, a <strong className="text-teal-400 font-semibold">Senior Full-Stack Developer</strong> with over 4+ years of professional experience designing, developing, and maintaining scalable web applications, RESTful APIs, and enterprise-grade software.
                 </p>
                 <p>
-                  Currently driving technical excellence at <strong className="text-white font-semibold">SoftVolta (Islamabad, Pakistan)</strong>, I specialize in bridging robust backend architectures built with <strong className="text-teal-400">C#, .NET Core, ASP.NET Web API, and Node.js</strong> with modern, high-performance frontend interfaces in <strong className="text-indigo-400">React.js, Next.js, TypeScript, and Tailwind CSS</strong>.
+                  Strong expertise in building responsive front-end applications with <strong className="text-indigo-400">React.js, Next.js, and TypeScript</strong>, alongside secure backend architectures using <strong className="text-teal-400">Node.js, Express.js, ASP.NET Core, and C#</strong> across healthcare, hospital management, and enterprise domains.
                 </p>
                 <p>
-                  My engineering ethos revolves around clean code principles, SOLID architectural patterns, database performance tuning (SQL Server & MongoDB), and seamless cloud deployments using AWS and Docker.
+                  Proficient in JWT authentication, role-based access control (RBAC), real-time applications with SignalR, Docker containerization, AWS deployment, and Agile methodologies.
                 </p>
               </div>
             )}
@@ -331,12 +312,12 @@ export default function Portfolio() {
             {activeAboutTab === 'stack' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
-                  { title: 'Backend Mastery', desc: 'C#, .NET Core 8, ASP.NET Web API, Entity Framework Core, LINQ, Node.js, Express.js' },
-                  { title: 'Frontend Engineering', desc: 'React.js, Next.js (SSR/SSG), TypeScript, JavaScript ES6+, Tailwind CSS, Redux Toolkit' },
-                  { title: 'Database & Cloud', desc: 'Microsoft SQL Server, MongoDB, AWS (EC2, S3, RDS, IAM), Docker, Redis Caching' },
-                  { title: 'Security & APIs', desc: 'JWT Authentication, OAuth 2.0, Role-Based Access Control (RBAC), RESTful API design' },
-                  { title: 'Real-Time Systems', desc: 'ASP.NET SignalR, WebSockets, Event-Driven Architectures, Asynchronous Processing' },
-                  { title: 'DevOps & Quality', desc: 'Git, GitHub Actions, CI/CD Pipelines, Unit Testing (xUnit), Agile/Scrum' }
+                  { title: 'Frontend Development', desc: 'React.js, Next.js (App & Pages Router, SSR, SSG), TypeScript, Tailwind CSS, Redux Toolkit, Zustand' },
+                  { title: 'Back-End Development', desc: 'Node.js, Express.js, ASP.NET Core, C#, Python, RESTful APIs, GraphQL, SignalR, Microservices' },
+                  { title: 'Databases & ORM', desc: 'SQL Server, PostgreSQL, MySQL, MongoDB, Entity Framework Core, Mongoose ODM, LINQ' },
+                  { title: 'Cloud & DevOps', desc: 'AWS (EC2, S3, RDS, IAM, CloudWatch), Docker, Kubernetes, CI/CD Pipelines, Git, GitHub' },
+                  { title: 'Security & Auth', desc: 'JWT Authentication, OAuth 2.0, Role-Based Access Control (RBAC), API Security' },
+                  { title: 'Methodologies', desc: 'Clean Architecture, Code Reviews, Core Web Vitals, Lighthouse Audits, Agile / Scrum' }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
                     <h4 className="text-teal-300 font-bold text-sm mb-2">{item.title}</h4>
@@ -350,11 +331,11 @@ export default function Portfolio() {
               <div className="space-y-6">
                 <div className="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                   <div>
-                    <h4 className="text-lg font-bold text-white mb-1">Bachelor of Software Engineering (BSSE)</h4>
-                    <p className="text-teal-400 text-sm font-medium">Gomal University, Dera Ismail Khan, Pakistan</p>
+                    <h4 className="text-lg font-bold text-white mb-1">BS in Software Engineering</h4>
+                    <p className="text-teal-400 text-sm font-medium">Gomal University, Dera Ismail Khan</p>
                   </div>
                   <div className="px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-xs">
-                    Graduated: 2020
+                    Graduated: 2022
                   </div>
                 </div>
               </div>
@@ -362,20 +343,19 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 3. TECHNICAL SKILLS SECTION */}
+        {/* TECHNICAL SKILLS SECTION */}
         <section id="skills" className="py-20">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-xs font-mono uppercase tracking-widest text-teal-400 mb-3">Technical Competencies</h2>
             <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Enterprise Technology Stack</h3>
-            <p className="text-slate-400 text-sm">Explore my proficiency across backend engineering, frontend frameworks, databases, and cloud infrastructure.</p>
+            <p className="text-slate-400 text-sm">Explore my proficiency across frontend, backend, databases, and cloud infrastructure.</p>
           </div>
 
-          {/* Search & Filters */}
           <div className="max-w-4xl mx-auto mb-10 flex flex-col sm:flex-row gap-4 items-center justify-between">
             <div className="flex flex-wrap gap-2 justify-center">
               {[
                 { id: 'all', label: 'All Skills' },
-                { id: 'backend', label: '.NET & Backend' },
+                { id: 'backend', label: 'Backend' },
                 { id: 'frontend', label: 'Frontend' },
                 { id: 'database', label: 'Databases' },
                 { id: 'cloud', label: 'Cloud & DevOps' },
@@ -407,7 +387,6 @@ export default function Portfolio() {
             </div>
           </div>
 
-          {/* Skills Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {filteredSkills.map((skill, idx) => (
               <div key={idx} className="glass-card p-6 rounded-2xl border border-slate-800/80 shadow-lg glass-card-hover group">
@@ -423,7 +402,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 4. PROFESSIONAL EXPERIENCE SECTION */}
+        {/* PROFESSIONAL EXPERIENCE SECTION */}
         <section id="experience" className="py-20">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-xs font-mono uppercase tracking-widest text-teal-400 mb-3">Career Journey</h2>
@@ -432,33 +411,62 @@ export default function Portfolio() {
 
           <div className="max-w-4xl mx-auto relative pl-6 sm:pl-8 border-l-2 border-teal-500/30 space-y-12">
             
-            {/* Experience Item 1: SoftVolta */}
+            {/* SoftVolta Company */}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-teal-500 border-4 border-slate-950 shadow-md shadow-teal-500/50"></div>
               
               <div className="glass-card p-8 rounded-3xl border border-slate-800 shadow-2xl">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-4">
                   <div>
-                    <h4 className="text-xl font-bold text-white">Senior MERN Stack & .NET Developer</h4>
-                    <p className="text-teal-400 font-semibold text-sm">SoftVolta | Islamabad, Pakistan</p>
+                    <h4 className="text-xl font-bold text-white">Senior Full Stack & .NET Developer</h4>
+                    <p className="text-teal-400 font-semibold text-sm">SoftVolta Company</p>
                   </div>
                   <span className="px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-xs">
-                    October 2024 – Present (4+ Years Total exp)
+                    Oct 2024 – Present
                   </span>
                 </div>
 
-                <p className="text-slate-300 text-sm mb-6 leading-relaxed">
-                  Leading full-stack enterprise web development, architecting high-performance .NET Core microservices, and building scalable cloud-native applications with React.js, Next.js, and AWS.
-                </p>
+                <div className="space-y-3">
+                  {[
+                    'Architected and developed scalable enterprise solutions using Node.js, Express.js, React.js, Next.js, ASP.NET Core, PostgreSQL, MySQL, SQL Server, and MongoDB, supporting multi-tenant workloads.',
+                    'Built and maintained secure Web APIs for user management, scheduling, automated background workflows, AI service integrations, and third-party systems.',
+                    'Designed and optimized SQL Server, PostgreSQL, and MySQL relational databases along with MongoDB schemas using Entity Framework Core and Mongoose ODM.',
+                    'Implemented real-time features, push notifications, and live dashboard updates using SignalR hubs, reducing manual refresh cycles.',
+                    'Delivered responsive UI development using Next.js (SSR) and Tailwind CSS with focus on WCAG accessibility standards and Core Web Vitals.',
+                    'Engineered AI-assisted features and vector query workflows to enhance application automation across scheduling and analytics modules.',
+                    'Mentored junior developers, conducted peer code reviews, enforced clean architecture standards, and deployed cloud environments on AWS (EC2, S3, RDS).'
+                  ].map((bullet, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-1" />
+                      <span className="text-slate-300 text-xs sm:text-sm leading-relaxed">{bullet}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* CloudQuik Company */}
+            <div className="relative group">
+              <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-teal-500 border-4 border-slate-950 shadow-md shadow-teal-500/50"></div>
+              
+              <div className="glass-card p-8 rounded-3xl border border-slate-800 shadow-2xl">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-4">
+                  <div>
+                    <h4 className="text-xl font-bold text-white">Full Stack Developer</h4>
+                    <p className="text-teal-400 font-semibold text-sm">CloudQuik Company</p>
+                  </div>
+                  <span className="px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-xs">
+                    Oct 2022 – Sept 2024
+                  </span>
+                </div>
 
                 <div className="space-y-3">
                   {[
-                    'Develop and maintain full-stack enterprise web applications using C#, .NET Core, MongoDB, Express.js, React.js, and Next.js.',
-                    'Architect and maintain high-throughput RESTful APIs and backend services using ASP.NET Web API and Node.js.',
-                    'Implement modern Next.js features for server-side rendering (SSR), static site generation (SSG), and superior frontend SEO performance.',
-                    'Design and optimize SQL Server databases and MongoDB schemas with advanced indexing and query tuning.',
-                    'Implement enterprise security standards including JWT authentication, OAuth 2.0, role-based access control (RBAC), and secure API endpoints.',
-                    'Deploy, monitor, and scale cloud infrastructure using AWS services (EC2, S3, RDS, IAM) and Docker containerization.'
+                    'Developed scalable backend REST APIs using Node.js, Express.js, C#, ASP.NET Core, and Entity Framework Core, serving high-throughput business workflows.',
+                    'Built dynamic and responsive single-page front-end modules using React.js, Next.js, Bootstrap, HTML5, and Tailwind CSS.',
+                    'Managed SQL Server and MySQL database objects, writing stored procedures, view indexes, and automated data migration scripts.',
+                    'Implemented secure authentication and authorization using JWT tokens and Role-Based Access Control (RBAC) across user roles.',
+                    'Integrated third-party payment gateways, SMS notification services, and automated email reporting modules.'
                   ].map((bullet, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-1" />
@@ -472,7 +480,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 5. FEATURED PROJECTS SECTION */}
+        {/* FEATURED PROJECTS SECTION */}
         <section id="projects" className="py-20">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-xs font-mono uppercase tracking-widest text-teal-400 mb-3">Portfolio Showcase</h2>
@@ -480,12 +488,11 @@ export default function Portfolio() {
             <p className="text-slate-400 text-sm">Production-grade applications built with .NET Core, React.js, Next.js, and AWS.</p>
           </div>
 
-          {/* Project Filter Tabs */}
           <div className="flex justify-center gap-3 mb-12">
             {[
               { id: 'all', label: 'All Projects' },
               { id: 'dotnet', label: '.NET Core & Enterprise' },
-              { id: 'fullstack', label: 'MERN & Full-Stack' }
+              { id: 'fullstack', label: 'Healthcare & Full-Stack' }
             ].map(filter => (
               <button
                 key={filter.id}
@@ -501,8 +508,7 @@ export default function Portfolio() {
             ))}
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {filteredProjects.map((project) => (
               <div key={project.id} className="glass-card rounded-3xl p-8 border border-slate-800 shadow-2xl flex flex-col justify-between group glass-card-hover">
                 <div>
@@ -525,13 +531,13 @@ export default function Portfolio() {
                 </div>
 
                 <div className="pt-6 border-t border-slate-800/80 flex items-center justify-between">
-                  <div className="text-xs text-slate-400 font-mono flex items-center gap-1.5">
-                    <Activity className="w-3.5 h-3.5 text-teal-400" />
-                    <span>{project.impact}</span>
+                  <div className="text-xs text-slate-400 font-mono flex items-center gap-1.5 truncate max-w-[200px]">
+                    <Activity className="w-3.5 h-3.5 text-teal-400 shrink-0" />
+                    <span className="truncate">{project.impact}</span>
                   </div>
                   <button
                     onClick={() => setSelectedProjectModal(project)}
-                    className="px-4 py-2 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-300 hover:bg-teal-500/20 text-xs font-semibold transition-all flex items-center gap-1.5"
+                    className="px-4 py-2 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-300 hover:bg-teal-500/20 text-xs font-semibold transition-all flex items-center gap-1.5 shrink-0"
                   >
                     <span>Architecture</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -589,7 +595,7 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* 6. SYSTEM ARCHITECTURE & ENGINEERING SECTION */}
+        {/* ARCHITECTURE SECTION */}
         <section id="architecture" className="py-20">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-xs font-mono uppercase tracking-widest text-teal-400 mb-3">Engineering Principles</h2>
@@ -600,7 +606,7 @@ export default function Portfolio() {
             {[
               {
                 title: 'Clean Architecture',
-                desc: 'Strict separation of concerns across Domain, Application, Infrastructure, and Presentation layers ensuring testability and maintainability.',
+                desc: 'Strict separation of concerns across Domain, Application, Infrastructure, and Presentation layers ensuring testability.',
                 icon: Layers
               },
               {
@@ -628,7 +634,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 7. LIVE CODE PLAYGROUND SECTION */}
+        {/* CODE SNIPPET SECTION */}
         <section id="code" className="py-20">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-xs font-mono uppercase tracking-widest text-teal-400 mb-3">Code Showcase</h2>
@@ -674,7 +680,6 @@ namespace Enterprise.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        IConfiguration _configuration;
         private readonly EnterpriseDbContext _context;
 
         public UserRepository(EnterpriseDbContext context)
@@ -729,19 +734,18 @@ export function useApiFetch<T>(endpoint: string) {
           </div>
         </section>
 
-        {/* 8. CONTACT & FOOTER SECTION */}
+        {/* CONTACT SECTION */}
         <section id="contact" className="py-20">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-xs font-mono uppercase tracking-widest text-teal-400 mb-3">Get In Touch</h2>
             <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Let's Build Something Exceptional</h3>
-            <p className="text-slate-400 text-sm">Open for senior engineering roles, architectural consulting, and high-impact software contracts.</p>
+            <p className="text-slate-400 text-sm">Open for senior engineering roles, architectural consulting, and high-impact contracts.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            {/* Contact Details Cards */}
             <div className="space-y-6">
               {[
-                { title: 'Email Address', val: 'kshahzadi371@gmail.com', type: 'email', icon: Mail },
+                { title: 'Email Address', val: 'marishakhan08@gmail.com', type: 'email', icon: Mail },
                 { title: 'Phone / WhatsApp', val: '+92 332 8339093', type: 'phone', icon: Phone },
                 { title: 'Location', val: 'Islamabad, Pakistan', type: 'location', icon: MapPin }
               ].map((item, idx) => {
@@ -771,7 +775,6 @@ export function useApiFetch<T>(endpoint: string) {
               })}
             </div>
 
-            {/* Contact Form */}
             <div className="glass-card p-8 rounded-3xl border border-slate-800 shadow-2xl">
               <form onSubmit={(e) => { e.preventDefault(); alert('Thank you! Your message has been sent successfully.'); }} className="space-y-5">
                 <div>
@@ -799,7 +802,7 @@ export function useApiFetch<T>(endpoint: string) {
                   <textarea
                     rows={4}
                     required
-                    placeholder="Describe your enterprise software or .NET / MERN contract requirements..."
+                    placeholder="Describe your enterprise software or .NET / React requirements..."
                     className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-teal-500 resize-none"
                   ></textarea>
                 </div>
